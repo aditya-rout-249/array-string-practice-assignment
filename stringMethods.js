@@ -11,7 +11,7 @@ console.log(namedString.length);
 const stringToArray = [];
 const stringIterator = namedString[Symbol.iterator]();
 stringToArray.push(stringIterator.next().value);
-// loop to push eact single element using iterator array
+
 
 console.log(stringToArray);
 
@@ -103,9 +103,22 @@ console.log(namedString.substring(0, 7));
 
 // function to convert user credebtials to lower case to send them in send to save
 const processUserData = (firstName, email, address) => {
-  const changedFirstName = firstname.toLowerCase();
+  const changedFirstName = firstName.toLowerCase();
   const changedEmail = email.toLowerCase();
   const changedAddress = address.toLowerCase();
+
   return { changedAddress, changedEmail, changedFirstName };
 };
+console.log(processUserData('vikrant' , 'viks09@gmail.com', 'north2 19 bhag apartment 456001'));
 
+// use case of ToUppercase String Methods
+console.log(namedString.toLowerCase());
+
+// use case of trim method
+const removeWhiteSpace = (userAddress) => {
+   userAddress.trim();
+
+   return userAddress;
+};
+
+console.log(removeWhiteSpace('   new rani bhag  '))
