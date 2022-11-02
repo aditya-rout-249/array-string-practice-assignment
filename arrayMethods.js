@@ -136,14 +136,25 @@ numbers.forEach((element, index, array) => {
 });
 
 // use case on array.include() method
-console.log(beers.includes("bira" , 3));
+console.log(beers.includes("bira", 3));
 
 // use case of array.indexOf()  method
-console.log(beers.indexOf('kf', 1));
+console.log(beers.indexOf("kf", 1));
 
 //use of Array.isArray to check whether passed arguments is an array object or not return tyoe boolean
 console.log(Array.isArray(beers));
- 
+
 // use cases of Array.join() while passing an array
-const joinedBeers = beers.join(" Drink :-")
-console.log(joinedBeers)
+const joinedBeers = beers.join(" Drink :-");
+console.log(joinedBeers);
+
+// use of array.keys() method
+const iterateOrder = order.keys();
+
+// use cases array.lastIndexOf() method return the index of last occurence of an object in an array
+console.log(beers.lastIndexOf("Kf", 3));
+
+// use cases of array.map() return a new array by passing each element of calling array to callback passed
+const iterateMap = numbers.map((element, index, array) => {
+  return element + index + array.length;
+});
