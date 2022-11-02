@@ -130,7 +130,7 @@ const usingFlatMap = [beers, snacks].flatMap((element, index) => {
 console.log(usingFlatMap);
 
 // use Cases of for each method
-numbers.forEach((element, index, array) => {
+numbers.forEach(( element, index, array ) => {
   console.log(element, index, array.length);
   console.log(element * 10);
 });
@@ -158,3 +158,63 @@ console.log(beers.lastIndexOf("Kf", 3));
 const iterateMap = numbers.map((element, index, array) => {
   return element + index + array.length;
 });
+console.log(iterateMap);
+
+//use cases of array.of() method return an array of all the passed arguments
+const totalItems = Array.of(...repeatOrder);
+console.log(totalItems);
+
+// use of array.pop method to remove elemnt from last
+totalItems.pop();
+console.log(totalItems);
+
+// use of array.Reduce method
+const initialString = "";
+const beersObject = beers.reduce((returnString, element, index) => {
+  return returnString + element;
+}, initialString);
+console.log(beersObject);
+
+// use of array.Reduceright method
+const orderFromLast = order.reduceRight((finalOrder, element, index) => {
+  return finalOrder.concat(index + "-" + element);
+}, []);
+console.log(orderFromLast);
+
+// use cases array.reverse method it reverses the order of original array
+console.log(beers.reverse());
+
+// array.shift method to remove element from start
+console.log(repeat.shift());
+
+// use case of array.slice method to get shallow copy specifc part
+// start and end index of require array segment is passed as argument
+const partOrder = order.slice(2, 5);
+console.log(partOrder);
+
+// use cases of some to return if any one elemnt in array satisfies the   condition
+console.log(
+  numbers.some((value, index) => {
+    return value + index > 3000;
+  })
+);
+
+// use cases of sort function we can pass function for comparison as we want
+const sortedArray = numbers.sort();
+
+const beerSorted = beers.sort((beer1, beer2) => {
+  if (beer1 < beer2) {
+    return -1;
+  } else {
+    return 1;
+  }
+});
+
+//use cases of  splice method  from array
+console.log(numbers.splice(2, 0, 12, 233));
+
+// use case for to tolocalString from array
+console.log(beers.toLocaleString());
+
+// use cases for unshift to add element to start of the array
+beers.unshift('brocode' ,'hunter');
