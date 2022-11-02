@@ -50,3 +50,7 @@ const snacks = ['peanuts', 'fries', 'cheese', 'puffcorn']
 const party = beers.concat(snacks)
 console.log(party)
 
+// using copywith method with use case to provide (target) , (target,start.end)
+const repeat = beers.copyWithin(3)
+const repeatOrder = order.copyWithin(0, 4, 6)
+console.log(repeat)
