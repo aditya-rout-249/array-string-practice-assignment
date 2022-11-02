@@ -42,15 +42,20 @@ const obj = {
 console.log(Array.prototype.at.call(obj, 0)); 
   
 // use of array concat Method
-const order = quantity.concat("lemonTea : 7")
-console.log(order)
-const snacks = ['peanuts', 'fries', 'cheese', 'puffcorn']
+const order = quantity.concat("lemonTea : 7");
+console.log(order);
+const snacks = ['peanuts', 'fries', 'cheese', 'puffcorn'];
 
 // using conact for nested array
-const party = beers.concat(snacks)
-console.log(party)
+const party = beers.concat(snacks);
+console.log(party);
 
 // using copywith method with use case to provide (target) , (target,start.end)
-const repeat = beers.copyWithin(3)
-const repeatOrder = order.copyWithin(0, 4, 6)
-console.log(repeat)
+const repeat = beers.copyWithin(3);
+const repeatOrder = order.copyWithin(0, 4, 6);
+console.log(repeat);
+
+// using copy array.entries() to get iterable with key value pair
+const nextItem = order.entries();
+console.log(nextItem.next().value);
+console.log(nextItem.next().value);
