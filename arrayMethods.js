@@ -76,15 +76,23 @@ const orderStuff = [...beers];
 console.log(orderStuff.fill("kf ultra"));
 console.log(orderStuff.fill("white", 2, 5));
 
-// using array.filter method for passing diffrent no. of arguments 
-const kfUltra = orderStuff.filter((beer => {
-    return beer === 'kf ultra';
-  })
-);
-console.log(kfUltra)
+// using array.filter method for passing diffrent no. of arguments
+const kfUltra = orderStuff.filter((beer) => {
+  return beer === "kf ultra";
+});
+console.log(kfUltra);
 
 // while passing index with element beign parsed
-console.log( orderStuff.filter((element,index) => {
-   return (element+':'+index).length > 7;
- })
+console.log(
+  orderStuff.filter((element, index) => {
+    return (element + ":" + index).length > 7;
+  })
 );
+
+// using use cases of find method
+const numbers = [32, 47, 4747, 84949, 3992];
+
+const greaterThan = numbers.find((number, index) => {
+  return number + index > 4724;
+});
+ console.log(greaterThan)
