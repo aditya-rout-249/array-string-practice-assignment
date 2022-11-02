@@ -130,7 +130,10 @@ const usingFlatMap = [beers, snacks].flatMap((element, index) => {
 console.log(usingFlatMap);
 
 // use Cases of for each method
-numbers.forEach((element ,index ,array)=>{
-    console.log(element , index , array.length)
-    console.log(element*10)
-})
+numbers.forEach((element, index, array) => {
+  console.log(element, index, array.length);
+  console.log(element * 10);
+});
+
+// use case on array.include() method
+console.log(beers.includes("bira" , 3))
