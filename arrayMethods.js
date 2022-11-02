@@ -49,7 +49,7 @@ const snacks = ["peanuts", "fries", "cheese", "puffcorn"];
 const party = beers.concat(snacks);
 console.log(party);
 
-// using copywith method with use case to provide (target) , (target,start.end)
+// using copywith method with use case to provide (target) , (target,start, end)
 const repeat = beers.copyWithin(3);
 const repeatOrder = order.copyWithin(0, 4, 6);
 console.log(repeat);
@@ -71,7 +71,20 @@ console.log(
   })
 );
 
-// using array.fill method for while paassing different no. of arguments
+// using array.fill method for passing different no. of arguments
 const orderStuff = [...beers];
-console.log(orderStuff.fill("kf ultra "));
+console.log(orderStuff.fill("kf ultra"));
 console.log(orderStuff.fill("white", 2, 5));
+
+// using array.filter method for passing diffrent no. of arguments 
+const kfUltra = orderStuff.filter((beer => {
+    return beer === 'kf ultra';
+  })
+);
+console.log(kfUltra)
+
+// while passing index with element beign parsed
+console.log( orderStuff.filter((element,index) => {
+   return (element+':'+index).length > 7;
+ })
+);
