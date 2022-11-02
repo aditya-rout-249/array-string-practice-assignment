@@ -17,10 +17,9 @@ const employes = {
   },
 };
 
-
 // simple Array to have employe details as empDetails
-const empDetails = Array.from(employes)
-console.log(empDetails)   
+const empDetails = Array.from(employes);
+console.log(empDetails);
 
 // using from with callback function
 const quantity = Array.from(beers, (beer, index) => {
@@ -29,22 +28,22 @@ const quantity = Array.from(beers, (beer, index) => {
 console.log(quantity);
 
 // use of array.at methdos to find elemet at an index
-console.log(beers.at(4))
+console.log(beers.at(4));
 
 // calling at on a non-Array object
 const obj = {
-    length : 3,
-    0: 'vinod',
-    1: 'abbas',
-    2: 'Khalid'
-}
+  length: 3,
+  0: "vinod",
+  1: "abbas",
+  2: "Khalid",
+};
 
-console.log(Array.prototype.at.call(obj, 0)); 
-  
+console.log(Array.prototype.at.call(obj, 0));
+
 // use of array concat Method
 const order = quantity.concat("lemonTea : 7");
 console.log(order);
-const snacks = ['peanuts', 'fries', 'cheese', 'puffcorn'];
+const snacks = ["peanuts", "fries", "cheese", "puffcorn"];
 
 // using conact for nested array
 const party = beers.concat(snacks);
@@ -61,15 +60,18 @@ console.log(nextItem.next().value);
 console.log(nextItem.next().value);
 
 // using array.every() method to check for test function
-
-const lengthOfBeer = (element) =>{
-
-    return element.length > 1;
-}
+const lengthOfBeer = (element) => {
+  return element.length > 1;
+};
 console.log(beers.every(lengthOfBeer));
 
-console.log(beers.every((element,index) => {
-    return (element+':'+index).length > 2
+console.log(
+  beers.every((element, index) => {
+    return (element + ":" + index).length > 2;
   })
 );
 
+// using array.fill method for while paassing different no. of arguments
+const orderStuff = [...beers];
+console.log(orderStuff.fill("kf ultra "));
+console.log(orderStuff.fill("white", 2, 5));
