@@ -74,11 +74,38 @@ paddPassword("--@vikram098", "vicky", "29/04/2009");
 console.log(namedString.repeat(100));
 
 // Replace ReplaceAll Methods of string which takes pattern from a RegEx
-namedString.replace(/j[a-z]/g, 'SIMBa');
+namedString.replace(/j[a-z]/g, "SIMBa");
 console.log(namedString);
-namedString.replaceAll(/j[a-z]/g, 'simba');
+namedString.replaceAll(/j[a-z]/g, "simba");
 console.log(namedString);
 
+// to search for emails in a paragraph that uses strings Search method for task
+const searchTotalMails = (paragraph) => {
+  return paragraph.search(/ [a-z0-9]+@[a-z]+\.[a-z]{2,3}/);
+};
 
+// Function to extract significant figures from a specific pattern using slice Method of Strings
+const findSignificantFigures = (hashValue) => {
+  const significantFigure = hashValue.slice(16, hashValue.length - 4);
 
+  return significantFigure;
+};
+
+// use cases for split method of strings
+const splitString = namedString.split(" ");
+console.log(splitString);
+
+// use case for startwith method of to find
+console.log(namedString.startsWith("a"));
+
+// use case for substring to determine part of string between start and end of posiyion indexex
+console.log(namedString.substring(0, 7));
+
+// function to convert user credebtials to lower case to send them in send to save
+const processUserData = (firstName, email, address) => {
+  const changedFirstName = firstname.toLowerCase();
+  const changedEmail = email.toLowerCase();
+  const changedAddress = address.toLowerCase();
+  return { changedAddress, changedEmail, changedFirstName };
+};
 
