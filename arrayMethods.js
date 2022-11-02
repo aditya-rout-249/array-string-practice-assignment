@@ -95,4 +95,25 @@ const numbers = [32, 47, 4747, 84949, 3992];
 const greaterThan = numbers.find((number, index) => {
   return number + index > 4724;
 });
- console.log(greaterThan)
+console.log(greaterThan);
+
+// using use case array.findIndex method
+console.log(
+  numbers.findIndex((number, index) => {
+    return number + index < 4757;
+  })
+);
+
+//Use case of findLast method to traverse array from last and find the first element that satisfies the condition
+console.log(
+  numbers.findLast((number, index) => {
+    return number + index > 4757;
+  })
+);
+
+// use case of findLastIndex of function
+console.log(
+  numbers.findLastIndex((number, index) => {
+    return number + index > 4757;
+  })
+);
