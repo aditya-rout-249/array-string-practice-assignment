@@ -17,7 +17,7 @@ console.log(stringToArray);
 // using test case to get charactior at specific index in string
 console.log(namedString.at(9));
 
-// using test case for chatAt method of string
+// using test case for charAt method of string
 
 let index = 0;
 while (namedString.charAt(index)) {
@@ -28,7 +28,7 @@ while (namedString.charAt(index)) {
 //charCodeAt return charactor code of charactor UTF-16
 console.log(namedString.charCodeAt(0));
 
-// concate method usecase of strings
+// concat method usecase of strings
 namedString.concat("Monty_942", "Dilip_Singh");
 console.log(namedString);
 
@@ -60,4 +60,4 @@ console.log(emailValidator('user@gmail.com'));
 // use case for matchAll methods of 
 console.log(namedString.matchAll(regex));
 
-//
+// 
