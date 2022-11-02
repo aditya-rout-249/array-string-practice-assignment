@@ -59,3 +59,17 @@ console.log(repeat);
 const nextItem = order.entries();
 console.log(nextItem.next().value);
 console.log(nextItem.next().value);
+
+// using array.every() method to check for test function
+
+const lengthOfBeer = (element) =>{
+
+    return element.length > 1;
+}
+console.log(beers.every(lengthOfBeer));
+
+console.log(beers.every((element,index) => {
+    return (element+':'+index).length > 2
+  })
+);
+
