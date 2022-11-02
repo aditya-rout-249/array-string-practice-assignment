@@ -136,4 +136,14 @@ numbers.forEach((element, index, array) => {
 });
 
 // use case on array.include() method
-console.log(beers.includes("bira" , 3))
+console.log(beers.includes("bira" , 3));
+
+// use case of array.indexOf()  method
+console.log(beers.indexOf('kf', 1));
+
+//use of Array.isArray to check whether passed arguments is an array object or not return tyoe boolean
+console.log(Array.isArray(beers));
+ 
+// use cases of Array.join() while passing an array
+const joinedBeers = beers.join(" Drink :-")
+console.log(joinedBeers)
