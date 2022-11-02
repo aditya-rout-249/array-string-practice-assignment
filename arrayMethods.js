@@ -28,4 +28,6 @@ const quantity = Array.from(beers, (beer, index) => {
 });
 console.log(quantity);
 
-// use
+// use of array.at methdos to find elemet at an index
+console.log(beers.at(4))
+
