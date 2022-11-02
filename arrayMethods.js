@@ -117,3 +117,14 @@ console.log(
     return number + index > 4757;
   })
 );
+
+// Use Cases Of flat function
+const orderTilNow = [beers, [snacks]];
+console.log(orderTilNow.flat(1));
+
+// use Cases of flatmap
+const usingFlatMap = [beers, snacks].flatMap((element, index) => {
+  return element + ":" + index;
+});
+
+console.log(usingFlatMap)
